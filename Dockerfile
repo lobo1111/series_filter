@@ -1,7 +1,6 @@
 FROM centos:6
 
 RUN yum -y install epel-release
-RUN rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 RUN yum -y install python-pip
 RUN pip install --upgrade pip
 RUN pip install -I flexget
@@ -15,6 +14,8 @@ ENV SMB_PWD smb_pwd
 VOLUME /opt/sort_series
 VOLUME /opt/complete
 VOLUME /mnt/storage
+
+COPY configManager opt/configManager/
 
 COPY start.sh /opt/
 RUN chmod +x /opt/start.sh
