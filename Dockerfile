@@ -7,10 +7,12 @@ RUN pip install --upgrade pip
 RUN pip install -I flexget
 RUN yum -y install samba-client cifs-utils
 
-ENV SMB_PATH 192.168.7.5:/magazyn
-ENV SMB_USER torrent
-ENV SMB_PWD toor.12
+ENV SMB_ENABLE true
+ENV SMB_PATH URL
+ENV SMB_USER smb_user
+ENV SMB_PWD smb_pwd
 
+VOLUME /opt/sort_series
 VOLUME /opt/complete
 VOLUME /mnt/storage
 
