@@ -6,10 +6,16 @@ RUN pip install --upgrade pip
 RUN pip install -I flexget
 RUN yum -y install samba-client cifs-utils
 
-ENV SMB_ENABLE true
-ENV SMB_PATH URL
-ENV SMB_USER smb_user
-ENV SMB_PWD smb_pwd
+ENV SMB_SOURCE_ENABLE true
+ENV SMB_SOURCE_PATH URL
+ENV SMB_SOURCE_USER smb_user
+ENV SMB_SOURCE_PWD smb_pwd
+
+ENV SMB_TARGET_ENABLE true
+ENV SMB_TARGET_PATH URL
+ENV SMB_TARGET_USER smb_user
+ENV SMB_TARGET_PWD smb_pwd
+
 ENV SLEEP 300
 
 VOLUME /opt/sort_series
