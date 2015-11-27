@@ -17,7 +17,7 @@ config = dict(
             require_field = "series_name",
             accept_all = True,
             move = dict(
-                to = "/mnt/storage/video/seriale/{{series_name}}/Season {{series_season|pad(2)}}",
+                to = "/mnt/storage/{{series_name}}/Season {{series_season|pad(2)}}",
                 filename = "{{series_name}} - {{series_id}}",
                 clean_source = 50
             )
