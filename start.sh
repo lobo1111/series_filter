@@ -7,5 +7,9 @@ fi
 cd /opt/configManager
 python main.py
 
-#flexget -c /opt/sort_series/config.yml daemon
-bash
+while :
+do
+        flexget -c /opt/sort_series/config.yml execute
+        sleep $SLEEP
+done
+

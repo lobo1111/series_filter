@@ -10,6 +10,7 @@ ENV SMB_ENABLE true
 ENV SMB_PATH URL
 ENV SMB_USER smb_user
 ENV SMB_PWD smb_pwd
+ENV SLEEP 300
 
 VOLUME /opt/sort_series
 VOLUME /opt/complete
