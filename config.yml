@@ -1,0 +1,5 @@
+{tasks: {sort_series: {accept_all: true, disable: [retry_failed, seen, seen_info_hash],
+      filesystem: {path: /opt/complete, recursive: true, regexp: .*\.(avi|mkv|mp4)$},
+      metainfo_series: true, move: {clean_source: 50, rename: '{{series_name}} -
+          {{series_id}}', to: '/opt/storage/{{series_name}}'}, regexp: {reject: [
+          sample]}, require_field: series_name, seen: local, thetvdb_lookup: yes, metainfo_series: yes}}}
